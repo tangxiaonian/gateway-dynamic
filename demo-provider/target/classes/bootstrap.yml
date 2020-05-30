@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: demo-provider
+  cloud:
+    nacos:
+      config:
+        namespace: aad04f36-a499-425a-8aad-54cea52bf068
+        server-addr: 127.0.0.1:8848
+        file-extension: yaml

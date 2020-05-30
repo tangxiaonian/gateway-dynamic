@@ -1,0 +1,33 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: demo-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 8000
+        readTimeout: 8000
+        loggerLevel: basic
+
+#feign:
+#  hystrix:
+#    enabled: false
+#  client:
+#    config:
+#      demo-provider:
+#        connectTimeout: 8000
+#        readTimeout: 8000
+#        loggerLevel: full
